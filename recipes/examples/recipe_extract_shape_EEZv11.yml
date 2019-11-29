@@ -1,0 +1,50 @@
+# ESMValTool
+# recipe_python.yml
+---
+documentation:
+  description: |
+    Example recipe extracting precipitation in the EEZ (v11) region.
+
+  authors:
+    - andela_bouwe
+    - tomas torsvik
+
+  maintainer:
+    - andela_bouwe
+    - tomas torsvik
+
+  references:
+    - acknow_project
+
+  projects:
+    - ewatercycle
+
+datasets:
+  - {dataset: CanESM2, project: CMIP5, exp: historical, ensemble: r1i1p1}
+
+preprocessors:
+
+  preproc:
+    extract_shape:
+      shapefile: shapefiles/World_EEZ_v11/World_EEZ_v11_20191118_HR_0_360/eez_v11_0_360.shp
+      crop: false
+
+diagnostics:
+
+  diagnostic:
+    description: Extract data from the EEZ v11 region.
+    themes:
+      - phys
+    realms:
+      - atmos
+    variables:
+      pr:
+        mip: Amon
+        start_year: 2000
+        end_year: 2002
+        preprocessor: preproc
+    scripts:
+      script1:
+        script: examples/diagnostic.py
+        quickplot:
+          plot_type: pcolormesh
