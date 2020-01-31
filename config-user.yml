@@ -5,7 +5,8 @@
 
 # Rootpaths to the data from different projects (lists are also possible)
 rootpath:
-  CMIP5: [~/data/NTK-data/CMIP5_data, ~/data/NTK-data/CMIP5_data/NorESM_regrid]
+#  CMIP5: [~/data/NTK-data/CMIP5_data, ~/data/NTK-data/CMIP5_data/NorESM_regrid]
+  CMIP5: ~/data/NTK-data/modeldata/ETHZ_CMIP5
   CMIP6: ~/data/NTK-data/CMIP6_data 
   OBS: ~/data/NTK-data/obsdata
   RAWOBS: ~/data/NTK-data/rawobsdata
@@ -15,8 +16,8 @@ rootpath:
 # Directory structure for input data: [default]/BADC/DKRZ/ETHZ/etc
 # See config-developer.yml for definitions.
 drs:
-  CMIP5: default
-  CMIP6: default
+  CMIP5: ETHZ
+  CMIP6: ETHZ
 
 
 # Run at most this many tasks in parallel null/[1]/2/3/4/..
@@ -66,7 +67,7 @@ save_intermediary_cubes: false
 # Remove the preproc dir if all fine
 # if this option is set to "true", ALL preprocessor files will be removed
 # CAUTION when using: if you need those files, set it to false
-remove_preproc_dir: true
+remove_preproc_dir: false
 
 # Path to custom config-developer file, to customise project configurations.
 # See config-developer.yml for an example. Set to None to use the default
