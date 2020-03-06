@@ -7,7 +7,7 @@
 rootpath:
 #  CMIP5: [~/data/NTK-data/CMIP5_data, ~/data/NTK-data/CMIP5_data/NorESM_regrid]
   CMIP5: ~/data/NTK-data/modeldata/ETHZ_CMIP5
-  CMIP6: ~/data/NTK-data/CMIP6_data 
+  CMIP6: ~/data/NTK-data/modeldata/ETHZ_CMIP6 
   OBS: ~/data/NTK-data/obsdata
   RAWOBS: ~/data/NTK-data/rawobsdata
   default: ~/data/NTK-data/Downloads
@@ -28,7 +28,7 @@ max_parallel_tasks: 1
 
 # Destination directory where all output will be written
 # including log files and performance stats
-output_dir: ~/esmvaltool/esmvaltool_output
+output_dir: ~/ESMValTool/esmvaltool_output
 
 
 # Auxiliary data directory (used for some additional datasets)
