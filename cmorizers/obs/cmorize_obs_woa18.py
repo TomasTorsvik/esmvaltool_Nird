@@ -40,13 +40,13 @@ def _fix_data(cube, var):
     """Specific data fixes for different variables."""
     logger.info("Fixing data ...")
     with constant_metadata(cube):
-        mll_to_mol = ['po4', 'si', 'no3']
-        if var in mll_to_mol:
-            cube /= 1000.  # Convert from ml/l to mol/m^3
+        umolkg_to_mol = ['po4', 'si', 'no3', 'o2']
+        if var in umolkg_to_mol:
+            cube /= 1.028 / 1000.  # Convert from umol/kg to mol/m^3
         elif var == 'thetao':
-            cube += 273.15  # Convert to Kelvin
-        elif var == 'o2':
-            cube *= 44.661 / 1000.  # Convert from ml/l to mol/m^3
+            cube += 273.15         # Convert to Kelvin
+        #elif var == 'o2':
+        #    cube *= 44.661 / 1000.  # Convert from ml/l to mol/m^3
     return cube
 
 
