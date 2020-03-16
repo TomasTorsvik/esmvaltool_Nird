@@ -13,11 +13,11 @@ attributes:
 # Variables to cmorize (here use only filename prefix)
 variables:
   thetao:
-    mip: Omon
+    mip: Oyr
     raw: t_an
     file: woa18_decav81B0_t
   so:
-    mip: Omon
+    mip: Oyr
     raw: s_an
     file: woa18_decav81B0_s
   o2:
