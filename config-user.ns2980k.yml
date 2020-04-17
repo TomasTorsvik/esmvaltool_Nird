@@ -28,7 +28,7 @@ max_parallel_tasks: 1
 
 # Destination directory where all output will be written
 # including log files and performance stats
-output_dir: /tos-project2/NS2980K/tomast/ESMValTool/esmvaltool_output
+output_dir: /tos-project2/NS2980K/home/tomast/ESMValTool/esmvaltool_output
 
 
 # Auxiliary data directory (used for some additional datasets)
