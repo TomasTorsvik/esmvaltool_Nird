@@ -45,8 +45,6 @@ def _fix_data(cube, var):
             cube /= 1.028 / 1000.  # Convert from umol/kg to mol/m^3
         elif var == 'thetao':
             cube += 273.15         # Convert to Kelvin
-        #elif var == 'o2':
-        #    cube *= 44.661 / 1000.  # Convert from ml/l to mol/m^3
     return cube
 
 
